@@ -1,0 +1,131 @@
+<!-- club.html - Página "Club" con secciones/carrousel según tu mockup -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Club - Club</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header igual en todas las páginas -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="STIKERS.png" alt="Logo del club">
+        <div class="brand">
+          <span class="name">REYES DEL FÚTBOL</span>
+          <span class="slogan">Escuela de Formación Deportiva</span>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">INICIO</a>
+        <a href="galeria.html">GALERÍA</a>
+        <a href="club.html" class="active">CLUB</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+
+      <form class="search" role="search">
+        <input class="form-control search" type="search" placeholder="Escriba aquí" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Evita que el header cubra contenido -->
+  <div class="header-spacer"></div>
+
+  <!-- Sección de introducción del club -->
+  <section class="section text-center">
+    <div class="container">
+      <h1>El Club</h1>
+      <p>Descripción breve del club. Aquí puedes poner la historia o misión.</p>
+    </div>
+  </section>
+
+  <!-- Carrusel de mini tarjetas (similar a tu mockup) -->
+  <section class="hero">
+    <div class="hero-inner container">
+      <div class="card">
+        <img src="images/club-thumb1.jpg" alt="Miembro 1">
+        <div>Actividad 1</div>
+      </div>
+      <div class="card">
+        <img src="images/club-thumb2.jpg" alt="Miembro 2">
+        <div>Actividad 2</div>
+      </div>
+      <div class="card">
+        <img src="images/club-thumb3.jpg" alt="Miembro 3">
+        <div>Actividad 3</div>
+      </div>
+      <div class="card">
+        <img src="images/club-thumb4.jpg" alt="Miembro 4">
+        <div>Actividad 4</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección con columnas de texto (información del club) -->
+  <section class="section">
+    <div class="container">
+      <div style="display:flex; gap:20px; flex-wrap:wrap;">
+        <div style="flex:1; min-width:220px;">
+          <h3>Misión</h3>
+          <p>Texto que explica la misión del club.</p>
+        </div>
+        <div style="flex:1; min-width:220px;">
+          <h3>Visión</h3>
+          <p>Texto que explica la visión.</p>
+        </div>
+        <div style="flex:1; min-width:220px;">
+          <h3>Valores</h3>
+          <p>Texto con valores principales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección con gran imagen (like mockup) -->
+  <section style="background:#666; padding:50px 0;">
+    <div class="container text-center">
+      <img src="images/club-large.jpg" alt="Imagen grande club" style="max-width:70%; border-radius:12px;">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="STIKERS.png" alt="" style="width:48px; height:48px; border-radius:8px;">
+        <div>
+          <div style="font-weight:700;">REYES DEL FÚTBOL</div>
+          <div style="font-size:0.85rem; color:#ccc;">Escuela de Formación Deportiva</div>
+        </div>
+      </div>
+      <div style="display:flex; gap:12px; align-items:center; font-size: 0,55rem;">
+        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Términos legales</div>|
+        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Política de Privacidad</div>|
+        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Cookies</div>|
+        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Accesibilidad</div>|
+        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Centro de ayuda/FAQs</div>|
+        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">© Copyright Página Oficial de Reyes del Fútbol</div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- WhatsApp flotante -->
+  <a class="whatsapp-float" id="waBtnC" href="https://wa.me/573001234567" target="_blank" title="Contactar por WhatsApp">
+    <img src="whatsApp.png" alt="WhatsApp">
+  </a>
+
+  <!-- Javascript mínimo: (si quisieras añadir más interactividad luego, aquí es el lugar) -->
+  <script>
+    // Por ahora no hace mucho; espacio para mejoras como carrusel automático
+    console.log('Página Club cargada');
+  </script>
+
+</body>
+</html>

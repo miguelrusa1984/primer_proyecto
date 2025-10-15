@@ -1,0 +1,259 @@
+<!-- index.html - Página principal basada en tu primer esquema -->
+<!-- Declaración DOCTYPE -->
+<!DOCTYPE html>
+<!-- Inicio de documento HTML -->
+<html lang="es">
+  <!-- Inicio de la cabecera del documento -->
+
+  <head>
+    <!-- Metadatos de codificación -->
+    <meta charset="utf-8" />
+    <!-- Metadatos de visualización para móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Título de la página -->
+    <title>Inicio - Club</title>
+    <!-- Enlace a la hoja de estilos única -->
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <!-- Inicio del cuerpo del documento -->
+
+  <body>
+    <!-- HEADER fijo (no se mueve) -->
+    <header class="site-header">
+      <!-- Contenedor interno del header -->
+      <div class="header-inner">
+        <!-- Zona de logo -->
+        <div class="logo">
+          <!-- Imagen del logo (reemplazar en /images/logo.png) -->
+          <img src="STIKERS.png" alt="Logo del club" />
+          <!-- Nombre y slogan -->
+          <div class="brand">
+            <span class="name">REYES DEL FÚTBOL</span>
+            <span class="slogan">Escuela de Formación Deportiva</span>
+          </div>
+        </div>
+
+        <!-- Menú de navegación principal -->
+        <nav class="main-nav">
+          <!-- Link a index (activo) -->
+          <a href="index.html" class="active">INICIO</a>
+          <!-- Link a galería -->
+          <a href="galeria.html">GALERÍA</a>
+          <!-- Link a club -->
+          <a href="club.html">CLUB</a>
+          <!-- Link a contacto -->
+          <a href="contacto.html">CONTACTO</a>
+        </nav>
+
+        <form class="search" role="search">
+          <input
+            class="form-control search"
+            type="search"
+            placeholder="Escriba aquí"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </header>
+
+    <!-- Espacio para que el contenido no quede oculto bajo el header fijo -->
+    <div class="header-spacer"></div>
+
+    <!-- HERO: bloque grande con tarjetas/carrousel -->
+    <section class="hero">
+      <!-- Contenedor central -->
+      <div class="hero-inner container">
+        <!-- Tarjeta 1 (imagen reemplazable) -->
+        <div class="card">
+          <img src="Imagen1.jpg" alt="Imagen 1 (reemplazar)" />
+          <div class="card-title">SOMOS UNIÓN</div>
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="card">
+          <img src="Imagen2.jpg" alt="Imagen 2 (reemplazar)" />
+          <div class="card-title">REINAS EL FUTBOL</div>
+        </div>
+        <!-- Tarjeta 3 -->
+        <div class="card">
+          <img src="Futbolista1.jpg" alt="Imagen 3 (reemplazar)" />
+          <div class="card-title">REYES DEL FÚTBOL</div>
+        </div>
+        <!-- Tarjeta 4 -->
+        <div class="card">
+          <img src="Futbolista2.jpg" alt="Imagen 4 (reemplazar)" />
+          <div class="card-title">FAMILIA REYES</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: calendario / eventos (representación simplificada del mockup) -->
+    <center>
+      <section class="sectionCalendario">
+        <!-- Próximos eventos a la izquierda -->
+        <div class="eventos">
+          <p style="font-weight: 700; text-align: center; font-size: 30px">
+            Próximos Eventos
+          </p>
+          <br />
+          <ul style="margin-top: 10px; list-style: none; padding: 0">
+            <li style="padding: 8px 0; border-bottom: 1px solid #aa273d">
+              Evento A - Fecha
+            </li>
+            <li style="padding: 8px 0; border-bottom: 1px solid #aa273d">
+              Evento B - Fecha
+            </li>
+            <li style="padding: 8px 0; border-bottom: 1px solid #aa273d">
+              Evento C - Fecha
+            </li>
+            <li style="padding: 8px 0; border-bottom: 1px solid #aa273d">
+              Evento D - Fecha
+            </li>
+            <li style="padding: 8px 0; border-bottom: 1px solid #aa273d">
+              Evento E - Fecha
+            </li>
+          </ul>
+        </div>
+
+        <!-- Calendario a la derecha -->
+        <div class="calendar">
+          <div
+            class="month"
+            id="month-year"
+            style="text-align: center; font-weight: 700; font-size: 30px"
+          ></div>
+          <div class="days" id="days"></div>
+        </div>
+      </section>
+    </center>
+
+    <!--Script del calendario-->
+    <script>
+      const daysContainer = document.getElementById("days");
+      const monthYear = document.getElementById("month-year");
+      const date = new Date();
+      const today = date.getDate();
+      const month = date.getMonth();
+      const year = date.getFullYear();
+      const months = [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre",
+      ];
+      monthYear.textContent = `${months[month]} ${year}`;
+      const firstDay = new Date(year, month, 1).getDay();
+      const totalDays = new Date(year, month + 1, 0).getDate();
+      // Espacios vacíos
+      for (let i = 0; i < firstDay; i++) {
+        const emptyDiv = document.createElement("div");
+        daysContainer.appendChild(emptyDiv);
+      }
+      // Días del mes
+      for (let i = 1; i <= totalDays; i++) {
+        const dayDiv = document.createElement("div");
+        dayDiv.textContent = i;
+        dayDiv.classList.add("day");
+        if (i === today) dayDiv.classList.add("today");
+        daysContainer.appendChild(dayDiv);
+      }
+    </script>
+
+    <!-- SECCIÓN: tarjetas informativas (tres columnas) -->
+    <section class="section" style="background: #aa273d">
+      <div class="containercategorias">
+        <h2 class="text-center">Nuestras Categorías</h2>
+        <div class="grid" style="margin-top: 20px">
+          <div style="background: #f5f5f5; border-radius: 12px; padding: 18px">
+            <img src="1.png" alt="Imagen 4 (reemplazar)" />
+            <p>
+              Entrenamiento especializado para niñas y mujeres, fomentando
+              habilidades, fuerza y trabajo en equipo.
+            </p>
+          </div>
+          <div style="background: #f5f5f5; border-radius: 12px; padding: 18px">
+            <img src="2.png" alt="Imagen 4 (reemplazar)" />
+            <p>
+              Desarrollo deportivo integral para niños y adolescentes,
+              combinando diversión y técnica.
+            </p>
+          </div>
+          <div style="background: #f5f5f5; border-radius: 12px; padding: 18px">
+            <img src="3.png" alt="Imagen 4 (reemplazar)" />
+            <p>
+              Primeros pasos en el deporte para los más pequeños, estimulando
+              coordinación y socialización.
+            </p>
+          </div>
+          <div style="background: #f5f5f5; border-radius: 12px; padding: 18px">
+            <img src="4.png" alt="Imagen 4 (reemplazar)" />
+            <p>
+              Programa diseñado para chicos, enfocado en destrezas, resistencia
+              y espíritu competitivo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: gran imagen central -->
+    <section class="fullscreen-banner">
+      <img src="chicafutbolista.jpg" alt="Imagen principal (reemplazar)" />
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <!-- Logo + Nombre -->
+        <div class="footer-brand">
+          <img src="STIKERS.png" alt="" />
+          <div>
+            <div class="footer-title">REYES DEL FÚTBOL</div>
+            <div class="footer-subtitle">Escuela de Formación Deportiva</div>
+          </div>
+        </div>
+
+        <!-- Enlaces -->
+        <div class="footer-links">
+          <a href="#">Términos legales</a>
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Cookies</a>
+          <a href="#">Accesibilidad</a>
+          <a href="#">Centro de ayuda/FAQs</a>
+          <span>© Copyright Página Oficial de Reyes del Fútbol</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a
+      class="whatsapp-float"
+      id="waBtn"
+      href="https://wa.me/573125847307"
+      target="_blank"
+      title="Contactar por WhatsApp"
+    >
+      <!-- Icono dentro del botón (reemplazar por svg si quieres) -->
+      <img src="whatsApp.png" alt="WhatsApp" />
+    </a>
+
+    <!-- SCRIPT: JavaScript mínimo (carrusel simple o funciones básicas) -->
+    <script>
+      // Pequeño script para asegurar que el link de WhatsApp usa número de ejemplo (puedes cambiar el href en el HTML)
+      document.getElementById("waBtn").addEventListener("click", function () {
+        // Al hacer click se abrirá el enlace target que ya apunta a wa.me con número aleatorio
+        console.log("Ir a WhatsApp (ejemplo)");
+      });
+    </script>
+  </body>
+</html>

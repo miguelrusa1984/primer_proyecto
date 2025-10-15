@@ -1,0 +1,148 @@
+<!-- galeria.html - Galería de imágenes / videos -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galería - Club</title>
+  <!-- Uso de la misma hoja de estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER idéntico al de index para mantener consistencia -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="STIKERS.png" alt="Logo del club">
+        <div class="brand">
+          <span class="name">REYES DEL FÚTBOL</span>
+          <span class="slogan">Escuela de Formación Deportiva</span>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">INICIO</a>
+        <a href="galeria.html" class="active">GALERÍA</a>
+        <a href="club.html">CLUB</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+
+      <form class="search" role="search">
+        <input class="form-control search" type="search" placeholder="Escriba aquí" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Espacio para el header fijo -->
+  <div class="header-spacer"></div>
+
+  <!-- ENCABEZADO DE LA GALERÍA (título centrado) -->
+  <section class="section">
+    <div class="container text-center">
+      <h1>Galería</h1>
+    </div>
+  </section>
+
+  <!-- CUADRÍCULA DE VÍDEOS / IMÁGENES (representa tu mockup con thumbnails) -->
+  <section class="sectionfotos" style="background:#fff;">
+    <div class="containerfotos">
+      <div class="gridfotos">
+        <!-- Cada thumb contiene una imagen; cambia el src por tus imágenes -->
+        <div class="thumbfotos"><img src="Futbolista1.jpg" alt="Galeria 1" style="max-width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+        <div class="thumbfotos"><img src="Futbolista2.jpg" alt="Galeria 2" style="max-width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+        <div class="thumbfotos"><img src="Futbolista3.jpg" alt="Galeria 3" style="max-width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+        <div class="thumbfotos"><img src="Futbolista4.jpg" alt="Galeria 4" style="max-width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+        <div class="thumbfotos"><img src="Futbolista5.jpg" alt="Galeria 5" style="max-width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+        <div class="thumbfotos"><img src="Futbolista6.jpg" alt="Galeria 6" style="max-width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+        <div class="thumbfotos"><img src="Futbolista7.jpg" alt="Galeria 7" style="max-width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+        <div class="thumbfotos"><img src="Futbolista8.jpg" alt="Galeria 8" style="max-width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDER AMPLIO (tema de tu mockup: carrusel grande con flechas) -->
+  <section class="sectioncarrusel" style="background:#aa273d; color:#fff;">
+    <div class="containercarrusel" style="position:relative;">
+      <!-- Contenedor del slide (simple) -->
+      <div id="slider" style="background:transparent; border-radius:14px; padding:40px; display:flex; align-items:center; justify-content:center;">
+        <!-- Imagen grande centrada (reemplazar por tus imágenes) -->
+        <img id="sliderImg" src="FondoReyes.jpg" alt="Slide principal" style="max-width:80%; border-radius:8px;">
+      </div>
+      
+
+      <!-- Flechas de navegación -->
+      <button id="prevBtn" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); background:#fff; border-radius:50%; width:40px; height:40px; border:none;">◀</button>
+      <button id="nextBtn" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); background:#fff; border-radius:50%; width:40px; height:40px; border:none;">▶</button>
+
+    </div>
+  </section>
+
+  <!--Sección videos-->
+  <center>
+<section class="sectionvideos" style="background:#fff;">
+  <h2 style="font-size: 30px; padding: 20px;">Grandes Momentos</h2>
+    <div class="containervideos">
+      <div class="gridvideos">
+        <!-- Cada thumb contiene una imagen; cambia el src por tus imágenes -->
+        <div class="thumbvideos"><video src="Video1.mp4" muted autoplay loop style="max-width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+        <div class="thumbvideos"><video src="Video2.mp4" muted autoplay loop style="max-width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+        <div class="thumbvideos"><video src="Video4.mp4" muted autoplay loop style="max-width:100%; height:100%; object-fit:cover; border-radius:8px;"></div>
+      </div>
+    </div>
+  </section>
+  </center>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="STIKERS.png" alt="" style="width:48px; height:48px; border-radius:8px;">
+        <div>
+          <div style="font-weight:700;">REYES DEL FÚTBOL</div>
+          <div style="font-size:0.85rem; color:#ccc;">Escuela de Formación Deportiva</div>
+        </div>
+      </div>
+      <div style="display:flex; gap:12px; align-items:center; font-size: 0,55rem;">
+        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Términos legales</div>|
+        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Política de Privacidad</div>|
+        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Cookies</div>|
+        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Accesibilidad</div>|
+        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Centro de ayuda/FAQs</div>|
+        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">© Copyright Página Oficial de Reyes del Fútbol</div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- WhatsApp flotante igual que en index -->
+  <a class="whatsapp-float" id="waBtnG" href="https://wa.me/573001234567" target="_blank" title="Contactar por WhatsApp">
+    <img src="whatsApp.png" alt="WhatsApp">
+  </a>
+
+  <!-- JS: carrusel muy simple que usa las imágenes de la grid -->
+  <script>
+    // Obtengo los thumbnails de la página para usarlos como fuente del slider
+    const thumbs = Array.from(document.querySelectorAll('.thumb img')).map(img => img.getAttribute('src'));
+    let idx = 0;
+    const sliderImg = document.getElementById('sliderImg');
+
+    // Función para actualizar la imagen del slider
+    function showSlide(i){
+      idx = (i + thumbs.length) % thumbs.length;
+      sliderImg.src = thumbs[idx];
+    }
+
+    // Eventos para botones prev/next
+    document.getElementById('prevBtn').addEventListener('click', ()=> showSlide(idx - 1));
+    document.getElementById('nextBtn').addEventListener('click', ()=> showSlide(idx + 1));
+
+    // Configuro thumbnails clicables para cambiar el slider (útil si añades más miniaturas)
+    document.querySelectorAll('.thumb img').forEach((img, i) => {
+      img.addEventListener('click', () => showSlide(i));
+    });
+  </script>
+
+</body>
+</html>
