@@ -727,3 +727,28 @@ footer.site-footer {
     gap: 6px;
   }
 }
+/* Estilo para un día que tiene un evento */
+.dia.con-evento {
+    position: relative; /* Esencial para posicionar el punto */
+}
+
+/* El indicador de punto usando un pseudo-elemento ::after */
+.dia.con-evento::after {
+    content: '';
+    display: block;
+    width: 6px; /* Tamaño del punto */
+    height: 6px; /* Tamaño del punto */
+    background-color: #aa273d; /* Color rojo/vino de tus líneas divisorias */
+    border-radius: 50%; /* Lo hace redondo */
+    position: absolute;
+    bottom: -4px; /* Un poco por encima del borde inferior de la celda */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el punto perfectamente */
+}
+
+/* Opcional: Estilo para la fecha actual (el 15 de Octubre) */
+.dia.hoy {
+    background-color: #e57e20; /* El color resaltado que se ve en la imagen */
+    color: white;
+    border-radius: 20%;
+}
