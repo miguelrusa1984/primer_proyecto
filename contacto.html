@@ -1,111 +1,225 @@
 <!-- contacto.html - Página de contacto con formulario sencillo -->
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contacto - Club</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto - Club</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header idéntico -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <img src="STIKERS.png" alt="Logo del club" />
+          <div class="brand">
+            <span class="name">REYES DEL FÚTBOL</span>
+            <span class="slogan">Escuela de Formación Deportiva</span>
+          </div>
+        </div>
 
-  <!-- Header idéntico -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="logo">
-        <img src="STIKERS.png" alt="Logo del club">
-        <div class="brand">
-          <span class="name">REYES DEL FÚTBOL</span>
-          <span class="slogan">Escuela de Formación Deportiva</span>
+        <nav class="main-nav">
+          <a href="index.html">INICIO</a>
+          <a href="galeria.html">GALERÍA</a>
+          <a href="club.html">CLUB</a>
+          <a href="contacto.html" class="active">CONTACTO</a>
+        </nav>
+
+        <form class="search" role="search">
+          <input
+            class="form-control search"
+            type="search"
+            placeholder="Escriba aquí"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </header>
+
+    <!-- Espacio del header fijo -->
+    <div class="header-spacer"></div>
+
+    <!-- Sección de contacto con formulario -->
+    <section class="sectioncontacto">
+      <div class="container text-center">
+        <h1>Contacto</h1>
+        <p>Completa el formulario y nos pondremos en contacto.</p>
+
+        <!-- Formulario básico: usa name y id para que luego puedas procesarlo desde backend -->
+        <form class="form" id="contactForm" action="#" method="post">
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Nombre completo"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Correo electrónico"
+            required
+          />
+          <input
+            type="tel"
+            name="telefono"
+            id="telefono"
+            placeholder="Teléfono (opcional)"
+          />
+          <select name="asunto" id="asunto">
+            <option value="">Seleccione asunto</option>
+            <option value="info">Información</option>
+            <option value="inscripcion">Inscripción</option>
+            <option value="info">Encuentros deportivos</option>
+            <option value="inscripcion">Torneos o Campeonatos</option>
+            <option value="otro">Otro</option>
+          </select>
+          <textarea
+            name="mensaje"
+            id="mensaje"
+            rows="6"
+            placeholder="Escribe tu mensaje..."
+          ></textarea>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Mapa o información de contacto alternativa -->
+    <section class="sectiondatos">
+      <div class="containerdatos">
+        <h3>También puedes contactarnos por:</h3>
+        <p>Teléfono: +57 3125847307</p>
+        <a href="http//contacto@reyesdelfutbol.org">contacto@reyesdelfutbol.org</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div style="display: flex; align-items: center; gap: 10px">
+          <img
+            src="STIKERS.png"
+            alt=""
+            style="width: 48px; height: 48px; border-radius: 8px"
+          />
+          <div>
+            <div style="font-weight: 700">REYES DEL FÚTBOL</div>
+            <div style="font-size: 0.85rem; color: #ccc">
+              Escuela de Formación Deportiva
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            font-size: 0, 55rem;
+          "
+        >
+          <div
+            style="
+              width: auto;
+              height: 12px;
+              background: #aa273d;
+              border-radius: 8px;
+              font-size: 8px;
+            "
+          >
+            Términos legales
+          </div>
+          |
+          <div
+            style="
+              width: auto;
+              height: 12px;
+              background: #aa273d;
+              border-radius: 8px;
+              font-size: 8px;
+            "
+          >
+            Política de Privacidad
+          </div>
+          |
+          <div
+            style="
+              width: auto;
+              height: 12px;
+              background: #aa273d;
+              border-radius: 8px;
+              font-size: 8px;
+            "
+          >
+            Cookies
+          </div>
+          |
+          <div
+            style="
+              width: auto;
+              height: 12px;
+              background: #aa273d;
+              border-radius: 8px;
+              font-size: 8px;
+            "
+          >
+            Accesibilidad
+          </div>
+          |
+          <div
+            style="
+              width: auto;
+              height: 12px;
+              background: #aa273d;
+              border-radius: 8px;
+              font-size: 8px;
+            "
+          >
+            Centro de ayuda/FAQs
+          </div>
+          |
+          <div
+            style="
+              width: auto;
+              height: 12px;
+              background: #aa273d;
+              border-radius: 8px;
+              font-size: 8px;
+            "
+          >
+            © Copyright Página Oficial de Reyes del Fútbol
+          </div>
         </div>
       </div>
+    </footer>
 
-      <nav class="main-nav">
-        <a href="index.html">INICIO</a>
-        <a href="galeria.html">GALERÍA</a>
-        <a href="club.html">CLUB</a>
-        <a href="contacto.html" class="active">CONTACTO</a>
-      </nav>
+    <!-- WhatsApp flotante -->
+    <a
+      class="whatsapp-float"
+      id="waBtnCt"
+      href="https://wa.me/573001234567"
+      target="_blank"
+      title="Contactar por WhatsApp"
+    >
+      <img src="whatsApp.png" alt="WhatsApp" />
+    </a>
 
-      <form class="search" role="search">
-        <input class="form-control search" type="search" placeholder="Escriba aquí" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </header>
-
-  <!-- Espacio del header fijo -->
-  <div class="header-spacer"></div>
-
-  <!-- Sección de contacto con formulario -->
-  <section class="section">
-    <div class="container text-center">
-      <h1>Contacto</h1>
-      <p>Completa el formulario y nos pondremos en contacto.</p>
-
-      <!-- Formulario básico: usa name y id para que luego puedas procesarlo desde backend -->
-      <form class="form" id="contactForm" action="#" method="post">
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required>
-        <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
-        <input type="tel" name="telefono" id="telefono" placeholder="Teléfono (opcional)">
-        <select name="asunto" id="asunto">
-          <option value="">Seleccione asunto</option>
-          <option value="info">Información</option>
-          <option value="inscripcion">Inscripción</option>
-          <option value="otro">Otro</option>
-        </select>
-        <textarea name="mensaje" id="mensaje" rows="6" placeholder="Escribe tu mensaje..."></textarea>
-        <button class="btn" type="submit">Enviar</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Mapa o información de contacto alternativa -->
-  <section class="section" style="background:#111; color:#fff;">
-    <div class="container">
-      <h3 style="color:#fff;">También puedes contactarnos por:</h3>
-      <p>Teléfono: +57 300 1234567</p>
-      <p>Email: contacto@club.com</p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div style="display:flex; align-items:center; gap:10px;">
-        <img src="STIKERS.png" alt="" style="width:48px; height:48px; border-radius:8px;">
-        <div>
-          <div style="font-weight:700;">REYES DEL FÚTBOL</div>
-          <div style="font-size:0.85rem; color:#ccc;">Escuela de Formación Deportiva</div>
-        </div>
-      </div>
-      <div style="display:flex; gap:12px; align-items:center; font-size: 0,55rem;">
-        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Términos legales</div>|
-        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Política de Privacidad</div>|
-        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Cookies</div>|
-        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Accesibilidad</div>|
-        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">Centro de ayuda/FAQs</div>|
-        <div style="width:auto; height:12px; background:#aa273d; border-radius:8px; font-size: 8px;">© Copyright Página Oficial de Reyes del Fútbol</div>
-      </div>
-    </div>
-  </footer>
-
-
-  <!-- WhatsApp flotante -->
-  <a class="whatsapp-float" id="waBtnCt" href="https://wa.me/573001234567" target="_blank" title="Contactar por WhatsApp">
-    <img src="whatsApp.png" alt="WhatsApp">
-  </a>
-
-  <!-- JS mínimo: manejo cliente básico del formulario (ejemplo sin enviar a servidor) -->
-  <script>
-    // Evito el envío real y muestro un ejemplo de manejo
-    document.getElementById('contactForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      alert('Formulario simulado: aquí puedes conectar tu backend para enviar los datos.');
-      // Aquí podrías hacer fetch() a tu endpoint /api/contact si cuentas con backend
-      this.reset();
-    });
-  </script>
-
-</body>
+    <!-- JS mínimo: manejo cliente básico del formulario (ejemplo sin enviar a servidor) -->
+    <script>
+      // Evito el envío real y muestro un ejemplo de manejo
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert(
+            "Formulario simulado: aquí puedes conectar tu backend para enviar los datos."
+          );
+          // Aquí podrías hacer fetch() a tu endpoint /api/contact si cuentas con backend
+          this.reset();
+        });
+    </script>
+  </body>
 </html>
